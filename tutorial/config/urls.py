@@ -18,7 +18,10 @@ from django.urls import path
 from core.views import (
     index, 
     IndexView, 
-    SubscriberAPIView)
+    SubscriberAPIView,
+    ProfileAPIView,
+    ProfileDetail
+    )
 
 
 urlpatterns = [
@@ -26,4 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view()),
     path('subscribers/', SubscriberAPIView.as_view()),
+    path('profiles/', ProfileAPIView.as_view()),
+    path('profiles/<int:pk>/', ProfileDetail.as_view()),
+
 ]
