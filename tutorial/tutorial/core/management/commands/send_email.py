@@ -9,7 +9,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         try:
-            from_email = "kan@odds.team"
+            from_email = "veerawat@odds.team"
             subject = "Don't forget to submit your homework :)"
             text_content = "Please submit your homework before Friday!"
             html_content = (
